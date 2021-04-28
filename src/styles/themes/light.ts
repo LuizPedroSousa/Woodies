@@ -2,10 +2,12 @@ const light = {
     title: 'light',
     color: {
         bg: '#FFFFFF',
+        white: '#fff',
         gray: {
-            400: '#222222',
+            100: 'rgba(34, 34, 34, 0.1)',
             500: '#3E3F43',
-            800: '#313235',
+            600: '#313235',
+            700: 'rgba(34, 34, 34, 0.75)',
             900: '#000000'
         },
         pink: {
@@ -13,7 +15,11 @@ const light = {
         },
         yellow: {
             400: '#F7DEA6',
-            700: '#DAA520'
+            700: '#DAA520',
+            800: '#B48C2A'
+        },
+        cyan: {
+            400: '#A8DCEC'
         }
     },
     fontSize: {
@@ -21,11 +27,13 @@ const light = {
         sm: '0.875rem', // 14
         md: '1rem', // 16
         lg: '1.5rem', // 24
-        xl: '2.25rem', // 32
-        '4xl': '4.5rem'
+        xl: '2.25rem', // 36
+        '3xl': '3rem', // 48
+        '5xl': '4.5rem' // 72
     },
     borderRadius: {
-        xs: '0.5rem', // 8px
+        xs: '0.25rem', // 4px
+        '2xs': '0.5rem', // 8px
         sm: '0.625rem', // 10px
         '2sm': '0.75rem', // 12px
         md: '1rem', // 16px

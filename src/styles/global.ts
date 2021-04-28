@@ -4,12 +4,13 @@ const globalStyle = (theme: Theme) => css`
         margin: 0;
         border: 0;
         padding: 0;
+        transition: 0.25s;
     }
 
     body {
-        background-color: ${theme.color};
+        background-color: ${theme.color.bg};
         font: 400 ${theme.fontSize.md} Nunito;
-        color: ${theme.color.gray['400']};
+        color: ${theme.color.gray[700]};
     }
 
     ul,
