@@ -54,7 +54,7 @@ export const Explore = styled.div`
         border-radius: ${({ theme: { borderRadius } }) => borderRadius.xs};
         background-color: ${({ theme: { color } }) => color.yellow[700]};
         color: ${({ theme: { color } }) => color.white};
-        font-weight: 800;
+        font: 800 ${({ theme: { fontSize } }) => fontSize.md} Nunito, sans-serif;
         width: 10.938rem;
         margin-top: 1rem;
         height: 3.125rem;
@@ -96,18 +96,12 @@ export const Explore = styled.div`
 export const Background = styled.svg`
     position: absolute;
     z-index: -1;
-    display: none;
     right: 0;
     top: 0;
     width: 22.8rem;
     height: 100%;
     border-bottom-left-radius: 10rem;
     background-color: ${({ theme: { color } }) => color.pink[400]};
-
-    // 992px
-    @media (min-width: 62em) {
-        display: block;
-    }
 `
 
 export const Balcony = styled.div`
@@ -128,6 +122,7 @@ export const Balcony = styled.div`
         transform: translateX(-2rem) translateY(5rem);
         width: 16rem;
     }
+
     // 480px
     @media (min-width: 30em) {
         img {

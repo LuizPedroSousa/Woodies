@@ -4,6 +4,8 @@ export const Container = styled.div`
     width: 100%;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
     main {
         padding: 0 1.25rem;
         padding-bottom: 4rem;
@@ -26,7 +28,9 @@ export const Container = styled.div`
     // 1280px
     @media (min-width: 80em) {
         main {
-            padding: 0 6.25rem;
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0;
         }
     }
 `

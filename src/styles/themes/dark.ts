@@ -25,21 +25,22 @@ const dark: Theme = {
         }
     },
     fontSize: {
-        xs: '0.75rem', // 12
-        sm: '0.875rem', // 14
-        md: '1rem', // 16
-        lg: '1.5rem', // 24
-        xl: '2.25rem', // 36
-        '3xl': '3rem', // 48
-        '5xl': '4.5rem' // 72
+        xs: '0.75rem', // 12px
+        sm: '0.875rem', // 14px
+        md: '1rem', // 16px
+        lg: '1.5rem', // 24px
+        xl: '2.25rem', // 36px
+        '3xl': '3rem', // 48px
+        '5xl': '4.5rem', // 72px
+        '7xl': '6rem' // 96px
     },
     borderRadius: {
-        xs: '0.25rem', // 4px
-        '2xs': '0.5rem', // 8px
-        sm: '0.625rem', // 10px
-        '2sm': '0.75rem', // 12px
-        md: '1rem', // 16px
-        lg: '1.5rem' // 24px
+        xs: '4px',
+        '2xs': '8px',
+        sm: '10px',
+        '2sm': '12px',
+        md: '16px',
+        lg: '24px'
     }
 }
 

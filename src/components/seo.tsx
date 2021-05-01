@@ -4,11 +4,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 interface SeoProps {
     description?: string
-    lang?: string
     meta?: Array<{}>
     title: string
 }
-function Seo({ description, lang, meta, title }: SeoProps) {
+function Seo({ description, meta, title }: SeoProps) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -29,7 +28,7 @@ function Seo({ description, lang, meta, title }: SeoProps) {
     return (
         <Helmet
             htmlAttributes={{
-                lang
+                lang: 'en'
             }}
             title={title}
             titleTemplate={defaultTitle && `%s | ${defaultTitle}`}

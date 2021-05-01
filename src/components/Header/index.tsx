@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                         <GiHamburgerMenu size={16} />
                     </Hamburger>
                 )}
-                <ul>
+                <ul role="list">
                     <li>
                         <MotionLink
                             variants={motionLinkVariants}

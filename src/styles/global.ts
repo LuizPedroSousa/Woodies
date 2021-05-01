@@ -4,12 +4,11 @@ const globalStyle = (theme: Theme) => css`
         margin: 0;
         border: 0;
         padding: 0;
-        transition: 0.25s;
     }
 
     body {
         background-color: ${theme.color.bg};
-        font: 400 ${theme.fontSize.md} Nunito;
+        font: 400 ${theme.fontSize.md} 'Nunito', sans-serif;
         color: ${theme.color.gray[700]};
     }
 
@@ -19,6 +18,7 @@ const globalStyle = (theme: Theme) => css`
     }
     button {
         cursor: pointer;
+        transition: 0.25s;
     }
 
     @media (min-width: 1080px) {

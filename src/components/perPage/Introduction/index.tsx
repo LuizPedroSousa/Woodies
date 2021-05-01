@@ -3,8 +3,10 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 import { Section, Explore, Background, Balcony } from './styles'
 
-import LogoLarge from '../../images/logo-large.svg'
+import LogoLarge from '../../../images/logo-large.svg'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 const Introduction: React.FC = () => {
+    const { md } = useBreakpoint()
     return (
         <Section>
             <p>
@@ -14,14 +16,14 @@ const Introduction: React.FC = () => {
             </p>
             <Balcony>
                 <StaticImage
-                    src="../../images/modern-balcony.png"
+                    src="../../../images/modern-balcony.png"
                     alt="Balcão moderno"
-                    width={468}
-                    height={477}
+                    width={1704}
+                    height={1731}
                 />
                 <LogoLarge />
             </Balcony>
-            <Background />
+            {md && <Background />}
             <Explore>
                 <strong>
                     This is the
