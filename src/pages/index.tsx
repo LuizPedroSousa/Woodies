@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import Introduction from '../components/perPage/Introduction'
 import AboutUs from '../components/perPage/AboutUs'
 import HowItWorks from '../components/perPage/HowItWorks'
-
+import Categories from '../components/perPage/Categories'
 const Home: React.FC = () => {
     return (
         <Container>
@@ -16,6 +16,7 @@ const Home: React.FC = () => {
                 <Introduction />
                 <AboutUs />
                 <HowItWorks />
+                <Categories />
             </main>
         </Container>
     )

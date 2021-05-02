@@ -1,0 +1,88 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Desk",
+            "image": {
+                "url": "https://i.ibb.co/Bq05041/desk.png",
+                "width": 246,
+                "height": 224
+            }
+        },
+        {
+            "id": 2,
+            "name": "Chair",
+            "image": {
+                "url": "https://i.ibb.co/F4kMc0S/chair.png",
+                "width": 165.25,
+                "height": 235
+            }
+        },
+        {
+            "id": 3,
+            "name": "Kitchenware",
+            "image": {
+                "url": "https://i.ibb.co/DtZs1m2/kitchenware.png",
+                "width": 181.01,
+                "height": 200
+            }
+        },
+        {
+            "id": 4,
+            "name": "Book Shelf",
+            "image": {
+                "url": "https://i.ibb.co/Qmm8Xpr/book-shelf.png",
+                "width": 148.82,
+                "height": 235
+            }
+        },
+        {
+            "id": 5,
+            "name": "Electronics",
+            "image": {
+                "url": "https://i.ibb.co/Z1q2VXv/electronics.png",
+                "width": 235,
+                "height": 139.12
+            }
+        }
+    ],
+
+    "testimony": [
+        {
+            "id": 1,
+            "comment": "My experience with WOODIES is a complete success, from customed furniture, range of product, modern design, purchasing experience, the delivery and newsletter. Litterally everything is great. Thank you!",
+            "stars": 5,
+            "user": {
+                "name": "Sandra Dewi",
+                "surname": "Jakarta Selatan",
+                "photo": {
+                    "url": "https://i.ibb.co/9WJd24G/pexels-andrea-piacquadio-3776146.jpg"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "comment": "My experience with WOODIES is a complete success, from customed furniture, range of product, modern design, purchasing experience, the delivery and newsletter. Litterally everything is great. Thank you!",
+            "stars": 5,
+            "user": {
+                "name": "Carlos",
+                "surname": "santana",
+                "photo": {
+                    "url": "https://i.ibb.co/1vN89tf/pexels-andrea-piacquadio-846741.jpg"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "comment": "My experience with WOODIES is a complete success, from customed furniture, range of product, modern design, purchasing experience, the delivery and newsletter. Litterally everything is great. Thank you!",
+            "stars": 3,
+            "user": {
+                "name": "Alexander",
+                "surname": "Rodz",
+                "photo": {
+                    "url": "https://i.ibb.co/Br0fzPd/pexels-andrea-piacquadio-839586.jpg"
+                }
+            }
+        }
+    ]
+}
