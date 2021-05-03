@@ -47,11 +47,11 @@
         }
     ],
 
-    "testimony": [
+    "testimonies": [
         {
             "id": 1,
             "comment": "My experience with WOODIES is a complete success, from customed furniture, range of product, modern design, purchasing experience, the delivery and newsletter. Litterally everything is great. Thank you!",
-            "stars": 5,
+            "stars": 2,
             "user": {
                 "name": "Sandra Dewi",
                 "surname": "Jakarta Selatan",
@@ -62,7 +62,7 @@
         },
         {
             "id": 2,
-            "comment": "My experience with WOODIES is a complete success, from customed furniture, range of product, modern design, purchasing experience, the delivery and newsletter. Litterally everything is great. Thank you!",
+            "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum lacus sed turpis venenatis gravida. Duis quis viverra ipsum, id varius ex. In vitae urna commodo, iaculis magna vitae, rhoncus erat. Nunc enim purus, dictum non odio at, sollicitudin aliquet mauris. Nam quis sollicitudin odio. In eros tortor, hendrerit consequat sagittis quis, eleifend non urna. Vivamus pretium ligula at lacinia mollis.",
             "stars": 5,
             "user": {
                 "name": "Carlos",
@@ -74,7 +74,7 @@
         },
         {
             "id": 3,
-            "comment": "My experience with WOODIES is a complete success, from customed furniture, range of product, modern design, purchasing experience, the delivery and newsletter. Litterally everything is great. Thank you!",
+            "comment": "Mauris eget ante diam.",
             "stars": 3,
             "user": {
                 "name": "Alexander",

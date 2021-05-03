@@ -6,6 +6,7 @@ import Introduction from '../components/perPage/Introduction'
 import AboutUs from '../components/perPage/AboutUs'
 import HowItWorks from '../components/perPage/HowItWorks'
 import Categories from '../components/perPage/Categories'
+import Testimony from '../components/perPage/Testimony'
 const Home: React.FC = () => {
     return (
         <Container>
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
                 <AboutUs />
                 <HowItWorks />
                 <Categories />
+                <Testimony />
             </main>
         </Container>
     )

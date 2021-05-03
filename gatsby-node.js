@@ -9,11 +9,13 @@ exports.sourceNodes = async ({
     const baseUrl = process.env.API_URL || 'http://localhost:3333'
 
     const categories = await axios.get(`${baseUrl}/categories`)
-    const testimony = await axios.get(`${baseUrl}/testimony`)
+    const testimonies = await axios.get(`${baseUrl}/testimonies`)
+
+
 
     createNode({
         categories: categories.data,
-        testimony: testimony.data,
+        testimonies: testimonies.data,
         // required fields
         id: 'api-request',
         parent: null,
@@ -22,7 +24,7 @@ exports.sourceNodes = async ({
             type: `Api`,
             contentDigest: createContentDigest({
                 ...categories.data,
-                ...testimony.data
+                ...testimonies.data
             })
         }
     })

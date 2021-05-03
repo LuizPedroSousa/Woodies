@@ -6,6 +6,7 @@ const dark: Theme = {
         bg: '#FFFFFF',
         white: '#fff',
         gray: {
+            50: '#AFAFAF',
             100: 'rgba(34, 34, 34, 0.1)',
             500: '#3E3F43',
             600: '#313235',
@@ -17,6 +18,7 @@ const dark: Theme = {
         },
         yellow: {
             400: '#F7DEA6',
+            500: '#FFC107',
             700: '#DAA520',
             800: '#B48C2A'
         },
