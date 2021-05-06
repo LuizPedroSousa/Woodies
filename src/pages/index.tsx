@@ -7,6 +7,7 @@ import AboutUs from '../components/perPage/AboutUs'
 import HowItWorks from '../components/perPage/HowItWorks'
 import Categories from '../components/perPage/Categories'
 import Testimony from '../components/perPage/Testimony'
+import Footer from '../components/perPage/Footer'
 const Home: React.FC = () => {
     return (
         <Container>
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
                 <Categories />
                 <Testimony />
             </main>
+            <Footer />
         </Container>
     )
 }

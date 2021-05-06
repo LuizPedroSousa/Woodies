@@ -19,6 +19,7 @@ export const Content = styled.div`
     }
 
     @media (min-width: 48em) {
+        margin-top: 4rem;
         flex-direction: row;
     }
 `

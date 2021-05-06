@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 interface HeaderContainerProps {
     hasViewMenu: boolean
 }
+
 export const HeaderContainer = styled.header<HeaderContainerProps>`
     background-color: inherit;
     display: flex;

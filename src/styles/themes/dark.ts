@@ -8,6 +8,7 @@ const dark: Theme = {
         gray: {
             50: '#AFAFAF',
             100: 'rgba(34, 34, 34, 0.1)',
+            400: '#8D8D8D',
             500: '#3E3F43',
             600: '#313235',
             700: 'rgba(34, 34, 34, 0.75)',
@@ -24,6 +25,9 @@ const dark: Theme = {
         },
         cyan: {
             400: '#A8DCEC'
+        },
+        red: {
+            500: '#EC493F'
         }
     },
     fontSize: {
