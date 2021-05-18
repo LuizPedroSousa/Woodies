@@ -2,8 +2,8 @@ import { css, Theme } from '@emotion/react'
 const globalStyle = (theme: Theme) => css`
     * {
         margin: 0;
-        border: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
     body {
@@ -16,9 +16,13 @@ const globalStyle = (theme: Theme) => css`
     li {
         list-style: none;
     }
+
+    hr {
+        border: 0;
+    }
     button {
+        border: 0;
         cursor: pointer;
-        transition: 0.25s;
     }
 
     @media (min-width: 1080px) {

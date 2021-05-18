@@ -1,11 +1,9 @@
 import styled from '@emotion/styled'
 export const Container = styled.div`
-    height: 100vh;
     width: 100%;
     align-items: center;
     flex-direction: column;
     position: relative;
-    overflow-x: hidden;
     main {
         padding: 0 1.25rem;
         padding-bottom: 4rem;
@@ -21,6 +19,7 @@ export const Container = styled.div`
     // 992px
     @media (min-width: 62em) {
         main {
+            height: 1200vh;
             padding: 0 5rem;
         }
     }

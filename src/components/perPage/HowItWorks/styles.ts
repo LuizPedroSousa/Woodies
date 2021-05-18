@@ -1,6 +1,15 @@
 import styled from '@emotion/styled'
+import { motion } from 'framer-motion'
 import Title from '../../Title'
-export const Section = styled.section`
+
+export const Section = styled(motion.section)`
+    // 992px
+    @media (min-width: 62em) {
+        height: 20%;
+    }
+`
+
+export const Sticky = styled(motion.div)`
     width: 100%;
     margin-top: 3rem;
     button {
@@ -39,7 +48,11 @@ export const Section = styled.section`
         button {
             width: 13.25rem;
         }
-        margin-top: 19.25rem;
+        margin: 0;
+        position: sticky;
+        height: 100vh;
+        top: 5rem;
+        left: 0;
     }
 `
 export const CustomTitle = styled(Title)`
@@ -223,6 +236,7 @@ export const Illustrations = styled.ul`
     @media (min-width: 62em) {
         margin-top: 4rem;
         li {
+            opacity: 0;
             svg {
                 height: 7.5rem;
             }

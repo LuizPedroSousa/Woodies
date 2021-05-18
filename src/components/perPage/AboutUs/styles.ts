@@ -1,41 +1,29 @@
 import styled from '@emotion/styled'
 import ItemField from '../../ItemField'
-import LogoImg from '../../../images/logo-large.svg'
+import { motion } from 'framer-motion'
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
+    width: 100%;
+    @media (min-width: 62em) {
+        height: 30%;
+    }
+`
+export const Sticky = styled(motion.div)`
     width: 100%;
     position: relative;
     margin-top: 4rem;
-    span {
-        position: absolute;
-        right: -5rem;
-        bottom: -8rem;
-        width: 10rem;
-    }
-
-    // 1030px and 1260px
-    @media (min-width: 64.375em) and (max-width: 78.75em) {
-        span {
-            right: -10rem;
-            width: 14rem;
-        }
-    }
 
     // 992px
     @media (min-width: 62em) {
-        margin-top: 8.875rem;
-    }
-
-    // 1280px
-    @media (min-width: 80em) {
-        span {
-            right: -11rem;
-            width: 16rem;
-        }
+        position: sticky;
+        height: 80vh;
+        top: 5rem;
+        left: 0;
+        margin-top: 0;
     }
 `
 
-export const Box = styled.div`
+export const Box = styled(motion.div)`
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -129,7 +117,7 @@ export const Item = styled(ItemField)`
     justify-content: center;
     margin-right: 2rem;
     align-items: center;
-    div {
+    & > div {
         position: relative;
         left: 4rem;
         bottom: 0.5rem;
@@ -137,32 +125,52 @@ export const Item = styled(ItemField)`
 
     // 530px and 760px
     @media (min-width: 33.125em) and (max-width: 47.5em) {
-        div {
+        & > div {
             left: 1rem;
         }
     }
 
     // 992px
     @media (min-width: 62em) {
-        div {
+        & > div {
             left: 6rem;
         }
     }
 `
-export const Logo = styled(LogoImg)`
+
+export const Span = styled(motion.span)`
     position: absolute;
     z-index: 10;
-    bottom: -10rem;
+    bottom: 0;
     width: max-content;
-    left: -6rem;
+    left: 0;
+    transform: translateY(6rem) translateX(-13rem);
 
     // 1280px
     @media (min-width: 80em) {
         width: 20rem;
-        left: -16rem;
     }
 `
-export const Footer = styled.footer`
+
+export const Tools = styled.span`
+    position: absolute;
+    right: 0;
+    width: 8rem;
+    height: 2rem;
+    position: absolute;
+
+    // 1030px and 1260px
+    @media (min-width: 64.375em) and (max-width: 78.75em) {
+        width: 14rem;
+    }
+
+    // 1280px
+    @media (min-width: 80em) {
+        width: 14rem;
+    }
+`
+
+export const Footer = styled(motion.footer)`
     display: flex;
     flex-direction: column;
     margin-top: 2rem;

@@ -32,6 +32,7 @@ export const Wrapper = styled.footer`
 
     // 992px
     @media (min-width: 62em) {
+        margin: 0;
         padding: 0 5rem;
     }
 
@@ -51,7 +52,6 @@ export const Container = styled.div`
 `
 
 export const NewsLetter = styled.div`
-    padding: 2rem 0;
     height: 10.875rem;
 
     p {
@@ -141,6 +141,7 @@ export const Button = styled.button<ButtonProps>`
     font: 600 ${({ theme: { fontSize } }) => fontSize.sm} Nunito, sans-serif;
     color: ${({ theme: { color } }) => color.white};
     opacity: ${({ isValid }) => (isValid ? 1 : 0.5)};
+    transition: 0.25s;
     :hover {
         background-color: ${({ theme: { color } }) => color.yellow[800]};
     }

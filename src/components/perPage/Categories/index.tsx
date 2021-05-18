@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Title from '../../Title'
 import {
     Section,
@@ -7,17 +7,18 @@ import {
     ItemsContainer
 } from './styles'
 import useCategories from '../../../hooks/useCategories'
-import { useTheme } from '@emotion/react'
 
 const Categories: React.FC = () => {
     const { items } = useCategories()
-    const { color } = useTheme()
+    const [currentCategoryHover, setCurrentCategoryHover] = useState<number>()
+    const [isActiveCategory, setIsActiveCategory] = useState(false)
 
-    const buttonVariants = {
-        hover: {
-            color: [color.gray[700], color.white, color.yellow[700]],
-            scale: [1, 0.9]
-        }
+    const handleSetActiveHover = (index: number) => {
+        setCurrentCategoryHover(index)
+        setIsActiveCategory(true)
+    }
+    const handleRemoveActiveHover = () => {
+        setIsActiveCategory(false)
     }
 
     return (
@@ -25,17 +26,21 @@ const Categories: React.FC = () => {
             <Title title="What we have" sectionName="categories" />
             <ItemsContainer>
                 {items.map(
-                    ({
-                        id,
-                        name,
-                        image: { url, width, height },
-                        fieldColor
-                    }) => {
+                    (
+                        { id, name, image: { url, width, height }, fieldColor },
+                        index
+                    ) => {
                         return (
                             <CustomItemField
+                                isActiveHover={
+                                    currentCategoryHover !== index &&
+                                    isActiveCategory
+                                }
                                 key={String(id)}
                                 fieldColor={fieldColor}
                                 className=""
+                                onHoverStart={() => handleSetActiveHover(index)}
+                                onHoverEnd={handleRemoveActiveHover}
                             >
                                 <figure>
                                     <figcaption>{name}</figcaption>
@@ -47,9 +52,7 @@ const Categories: React.FC = () => {
                                     />
                                 </figure>
                                 <MotionButton
-                                    whileHover="hover"
-                                    transition={{ duration: 0.2 }}
-                                    variants={buttonVariants}
+                                    whileHover={{ scale: [1, 1.2, 0.9] }}
                                     type="button"
                                 >
                                     Shop Now

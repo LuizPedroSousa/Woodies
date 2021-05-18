@@ -13,7 +13,6 @@ const Home: React.FC = () => {
         <Container>
             <Seo title="Home" />
             <Header />
-
             <main>
                 <Introduction />
                 <AboutUs />

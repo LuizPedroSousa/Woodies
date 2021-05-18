@@ -2,6 +2,16 @@ import styled from '@emotion/styled'
 export const Section = styled.section`
     margin-top: 4rem;
     width: 100%;
+
+    // 768px
+    @media (min-width: 48em) {
+        margin-top: 4rem;
+    }
+
+    // 992px
+    @media (min-width: 62em) {
+        margin-top: 14rem;
+    }
 `
 
 export const Content = styled.div`
@@ -18,6 +28,7 @@ export const Content = styled.div`
         max-width: 31.25rem;
     }
 
+    // 768px
     @media (min-width: 48em) {
         margin-top: 4rem;
         flex-direction: row;

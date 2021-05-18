@@ -1,19 +1,21 @@
+import { MotionProps } from 'framer-motion'
 import React from 'react'
 
 import { Box } from './styles'
 
 export type FieldColor = 'yellow' | 'pink' | 'cyan'
-interface ItemProps {
+interface ItemProps extends MotionProps {
     fieldColor?: FieldColor
     className: string
 }
 const ItemField: React.FC<ItemProps> = ({
     fieldColor,
     className,
-    children
+    children,
+    ...props
 }) => {
     return (
-        <Box className={className} fieldColor={fieldColor}>
+        <Box {...props} className={className} fieldColor={fieldColor}>
             {children}
         </Box>
     )

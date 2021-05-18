@@ -1,18 +1,24 @@
 import styled from '@emotion/styled'
-
 import { motion } from 'framer-motion'
 
-interface HeaderContainerProps {
+interface ContainerProps {
     hasViewMenu: boolean
 }
 
-export const HeaderContainer = styled.header<HeaderContainerProps>`
-    background-color: inherit;
+export const Container = styled(motion.header)<ContainerProps>`
+    position: fixed;
+    top: 0;
+    transition: 0.25s;
+    left: 0;
+    width: 100%;
+    background-color: ${({ theme: { color } }) => color.white};
+    border-bottom: 1px solid ${({ theme: { color } }) => color.gray[100]};
+    z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 3.75rem;
-    padding: 1.25rem;
+    padding: 0 1.25rem;
     div {
         display: flex;
         align-items: center;
@@ -25,7 +31,7 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
     }
     nav {
         ul {
-            z-index: 4;
+            top: 2.6rem;
             background-color: ${({ theme: { color } }) => color.white};
             margin-top: 1rem;
             padding-bottom: 1rem;
@@ -36,7 +42,11 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
             width: 100%;
             display: ${({ hasViewMenu }) => (hasViewMenu ? 'flex' : 'none')};
             align-items: center;
+            a {
+                height: 100%;
+            }
             li {
+                height: 3.5rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -46,16 +56,16 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
                 &:last-child {
                     background-color: inherit;
                     margin-top: 1rem;
+                    border-bottom: 0;
                     a {
                         text-transform: uppercase;
                         font-weight: 800;
                         background-size: 200%;
-                        height: 1.875rem;
                         border: 1px solid
                             ${({ theme: { color } }) => color.gray[500]};
                         padding: 0.625rem;
                         border-radius: ${({ theme: { borderRadius } }) =>
-                            borderRadius.xs};
+                            borderRadius['2xs']};
                     }
                 }
             }
@@ -66,12 +76,14 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
     // 768px
     @media (min-width: 48em) {
         padding-left: 2rem;
+        border: 0;
         h2 {
             display: none;
         }
         nav {
             width: max-content;
             ul {
+                top: 0;
                 border: 0;
                 padding-bottom: 0;
                 margin-top: 0;
@@ -86,6 +98,7 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
                         margin-left: 0.5rem;
                     }
                     &:last-child {
+                        height: 2.5rem;
                         width: 137px !important;
                     }
                 }
@@ -95,7 +108,12 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
 
     // 992px
     @media (min-width: 62em) {
-        padding-left: 5rem;
+        background-color: inherit;
+        padding: 0;
+        left: 50%;
+        top: 0.5rem;
+        transform: translate(-50%, 0);
+        max-width: 89.25%;
         h2 {
             display: block;
         }
@@ -104,6 +122,9 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
                 background-color: inherit;
                 li {
                     width: max-content;
+                    &:last-child {
+                        height: 3rem;
+                    }
                 }
             }
         }
@@ -111,10 +132,15 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
 
     // 1280px
     @media (min-width: 80em) {
-        padding-left: 6.25rem;
-        ul {
-            li {
-                padding: 0.5rem;
+        max-width: 75.25rem;
+        nav {
+            ul {
+                li {
+                    padding: 0.5rem;
+                    &:last-child {
+                        height: 3.8rem;
+                    }
+                }
             }
         }
     }

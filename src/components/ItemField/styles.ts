@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
+import { motion } from 'framer-motion'
 import { FieldColor } from '.'
 
 interface BoxProps {
     fieldColor?: FieldColor
     className: string
 }
-export const Box = styled.div<BoxProps>`
+export const Box = styled(motion.div)<BoxProps>`
     position: relative;
     width: 12.375rem;
     height: 16.25rem;
