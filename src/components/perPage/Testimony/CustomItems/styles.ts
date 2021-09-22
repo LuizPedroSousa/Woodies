@@ -17,6 +17,7 @@ export const CustomItemField = styled(ItemField)`
     border-bottom-right-radius: 3rem;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
     div {
+        width: 100%;
         height: 100%;
     }
 

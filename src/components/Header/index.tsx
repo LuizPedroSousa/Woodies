@@ -1,28 +1,19 @@
-import React, { MouseEvent, useState } from 'react'
+import React, { useState } from 'react'
 
 import { Container, Hamburger, MotionLink } from './styles'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import Logo from '../../images/logo.svg'
 import { useTheme } from '@emotion/react'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
-import { useMotionValue, useTransform, useViewportScroll } from 'framer-motion'
-
-type Href =
-    | '#home'
-    | '#about-us'
-    | '#how-it-works'
-    | '#categories'
-    | '#testimony'
-    | '#sign-up'
+import { useSmoothScroll } from '../../hooks/useSmoothScroll'
 
 const Header: React.FC = () => {
     const [hasViewMenu, setHasViewMenu] = useState(false)
     const { color } = useTheme()
-    const { scrollY } = useViewportScroll()
+
+    const { handleScrollToLink, headerY: y } = useSmoothScroll()
 
     const { sm, md } = useBreakpoint()
-
-    const y = useMotionValue(0)
 
     const motionLinkVariants = {
         hover: {
@@ -30,30 +21,7 @@ const Header: React.FC = () => {
         }
     }
 
-    let prevScrollPos = scrollY.get()
-
-    useTransform(scrollY, value => {
-        const currentScrollPos = value
-        if (prevScrollPos > currentScrollPos) {
-            prevScrollPos = currentScrollPos
-            return y.set(0)
-        } else if (currentScrollPos > 1378) {
-            prevScrollPos = currentScrollPos
-            return y.set(-60)
-        }
-    })
-
     const toggleViewMenu = () => setHasViewMenu(!hasViewMenu)
-
-    const handleScrollToLink = (
-        event: MouseEvent<HTMLAnchorElement>,
-        href: Href
-    ) => {
-        event.preventDefault()
-        const link = document.querySelector<any>(href).offsetTop
-        window.scrollTo({ top: link - 80, behavior: 'smooth' })
-        return y.set(0)
-    }
 
     return (
         <Container

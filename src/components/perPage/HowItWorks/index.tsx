@@ -53,7 +53,7 @@ const HowItWorks: React.FC = () => {
                             hidden: {
                                 opacity: [1, 0],
                                 scale: [1, 1.5, 1, 0],
-                                transition: { delay: 1.5 }
+                                transition: { duration: 0.5, delay: 0 }
                             }
                         }}
                         animate={animation}
@@ -71,7 +71,7 @@ const HowItWorks: React.FC = () => {
                             hidden: {
                                 opacity: [1, 0],
                                 scale: [1, 1.5, 1, 0],
-                                transition: { delay: 1 }
+                                transition: { duration: 0.5, delay: 0 }
                             }
                         }}
                         animate={animation}
@@ -89,7 +89,8 @@ const HowItWorks: React.FC = () => {
                             hidden: {
                                 opacity: [1, 0],
                                 scale: [1, 1.5, 1, 0],
-                                transition: { delay: 0.5 }
+
+                                transition: { duration: 0.5, delay: 0 }
                             }
                         }}
                         animate={animation}
@@ -106,7 +107,8 @@ const HowItWorks: React.FC = () => {
                             },
                             hidden: {
                                 opacity: [1, 0],
-                                scale: [1, 1.5, 1, 0]
+                                scale: [1, 1.5, 1, 0],
+                                transition: { duration: 0.5, delay: 0 }
                             }
                         }}
                         animate={animation}
@@ -125,7 +127,8 @@ const HowItWorks: React.FC = () => {
                         },
                         hidden: {
                             opacity: [1, 0],
-                            y: [null, 50]
+                            y: [null, 50],
+                            transition: { duration: 0.5, delay: 0 }
                         }
                     }}
                     animate={animation}

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export const Section = styled(motion.section)`
     width: 100%;
-    @media (min-width: 62em) {
+    @media (min-width: 992px) {
         height: 30%;
     }
 `
@@ -13,8 +13,7 @@ export const Sticky = styled(motion.div)`
     position: relative;
     margin-top: 4rem;
 
-    // 992px
-    @media (min-width: 62em) {
+    @media (min-width: 992px) {
         position: sticky;
         height: 80vh;
         top: 5rem;
@@ -48,8 +47,7 @@ export const Box = styled(motion.div)`
         grid-area: description;
     }
 
-    // 530px
-    @media (min-width: 33.125em) {
+    @media (min-width: 530px) {
         margin-top: 2rem;
         justify-items: baseline;
         grid-template-areas:
@@ -84,8 +82,7 @@ export const Box = styled(motion.div)`
         }
     }
 
-    // 768px
-    @media (min-width: 48em) {
+    @media (min-width: 768px) {
         p:nth-of-type(1) {
             font-size: calc(
                 ${({ theme: { fontSize } }) => fontSize.md} + 0.6rem
@@ -99,8 +96,7 @@ export const Box = styled(motion.div)`
         }
     }
 
-    // 992px
-    @media (min-width: 62em) {
+    @media (min-width: 992px) {
         p:nth-of-type(1) {
             font-size: ${({ theme: { fontSize } }) => fontSize.xl};
         }
@@ -123,15 +119,13 @@ export const Item = styled(ItemField)`
         bottom: 0.5rem;
     }
 
-    // 530px and 760px
-    @media (min-width: 33.125em) and (max-width: 47.5em) {
+    @media (min-width: 530px) and (max-width: 768px) {
         & > div {
             left: 1rem;
         }
     }
 
-    // 992px
-    @media (min-width: 62em) {
+    @media (min-width: 992px) {
         & > div {
             left: 6rem;
         }
@@ -146,8 +140,7 @@ export const Span = styled(motion.span)`
     left: 0;
     transform: translateY(6rem) translateX(-13rem);
 
-    // 1280px
-    @media (min-width: 80em) {
+    @media (min-width: 1280px) {
         width: 20rem;
     }
 `
@@ -159,13 +152,11 @@ export const Tools = styled.span`
     height: 2rem;
     position: absolute;
 
-    // 1030px and 1260px
-    @media (min-width: 64.375em) and (max-width: 78.75em) {
+    @media (min-width: 1030px) and (max-width: 1260px) {
         width: 14rem;
     }
 
-    // 1280px
-    @media (min-width: 80em) {
+    @media (min-width: 1280px) {
         width: 14rem;
     }
 `
@@ -214,7 +205,7 @@ export const Footer = styled(motion.footer)`
     }
 
     // 768px
-    @media (min-width: 48em) {
+    @media (min-width: 768px) {
         p:nth-of-type(1) {
             font-size: calc(
                 ${({ theme: { fontSize } }) => fontSize.md} + 0.6rem

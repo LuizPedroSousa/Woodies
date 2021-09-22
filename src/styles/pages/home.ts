@@ -9,23 +9,20 @@ export const Container = styled.div`
         padding-bottom: 4rem;
     }
 
-    // 768px
-    @media (min-width: 48em) {
+    @media (min-width: 768px) {
         main {
             padding: 0 2rem;
         }
     }
 
-    // 992px
-    @media (min-width: 62em) {
+    @media (min-width: 992px) {
         main {
-            height: 1200vh;
+            height: 1050vh;
             padding: 0 5rem;
         }
     }
 
-    // 1280px
-    @media (min-width: 80em) {
+    @media (min-width: 1280px) {
         main {
             max-width: 1024px;
             margin: 0 auto;

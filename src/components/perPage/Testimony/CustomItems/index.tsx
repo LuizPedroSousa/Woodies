@@ -9,16 +9,16 @@ const CustomItems: React.FC = () => {
             <CustomItemField className="">
                 <StaticImage
                     src="../../../../images/bed-room.png"
-                    width={3745}
-                    height={2670}
+                    width={1745}
+                    height={1670}
                     objectFit="cover"
                     alt="bed room"
                 />
             </CustomItemField>
             <CustomItemField className="">
                 <StaticImage
-                    width={3840}
-                    height={5760}
+                    width={1920}
+                    height={2880}
                     src="../../../../images/breakfast.png"
                     objectFit="cover"
                     alt="break fast"

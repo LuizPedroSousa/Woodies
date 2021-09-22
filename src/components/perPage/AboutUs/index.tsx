@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Title from '../../Title'
 
 import { Section, Tools, Sticky, Item, Box, Span, Footer } from './styles'
@@ -12,9 +12,11 @@ import {
     useTransform,
     useViewportScroll
 } from 'framer-motion'
+import { useSmoothScroll } from '../../../hooks/useSmoothScroll'
 
 const AboutUs: React.FC = () => {
     const { md } = useBreakpoint()
+    const { isScrollSmooth } = useSmoothScroll()
     const { scrollYProgress } = useViewportScroll()
 
     const firstAnimation = useAnimation()
@@ -44,28 +46,46 @@ const AboutUs: React.FC = () => {
         [1, 0.5, 0.5, 0]
     )
 
+    const [isFirstAnimationRunning, setIsFirstAnimationRunning] =
+        useState(false)
+
+    useEffect(() => {
+        if (isScrollSmooth) {
+            document.body.style.overflow = 'visible'
+            return
+        }
+        if (isFirstAnimationRunning) {
+            document.body.style.overflow = 'hidden'
+            return
+        }
+
+        document.body.style.overflow = 'visible'
+    }, [isFirstAnimationRunning, isScrollSmooth])
+
     useEffect(() => {
         if (md) {
             firstAnimationPoint.onChange(e => {
                 if (e === 0.1) {
-                    firstAnimation
-                        .start('hidden')
-                        .then(() => secondAnimation.start('show'))
+                    setIsFirstAnimationRunning(true)
+                    firstAnimation.start('hidden').then(() => {
+                        secondAnimation.start('show')
+                        setIsFirstAnimationRunning(false)
+                    })
                 }
             })
 
             secondAnimationPoint.onChange(e => {
                 if (!e) {
-                    secondAnimation
-                        .start('hidden')
-                        .then(() => firstAnimation.start('show'))
+                    secondAnimation.start('hidden').then(() => {
+                        firstAnimation.start('show')
+                    })
                 }
             })
         }
     }, [md])
 
     return (
-        <Section style={md ? {} : {}} id="about-us">
+        <Section id="about-us">
             {/* Pass any className to modify your styles  */}
             <Sticky style={md ? { opacity, scale } : {}}>
                 <Title sectionName="about us" title="Who we are" />
@@ -151,6 +171,7 @@ const AboutUs: React.FC = () => {
                     )}
                 </Box>
                 <Footer
+                    initial={md && { opacity: 0 }}
                     animate={secondAnimation}
                     variants={{
                         show: {

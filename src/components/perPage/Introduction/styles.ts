@@ -5,8 +5,7 @@ export const Section = styled(motion.section)`
     position: relative;
     margin-top: 6rem;
 
-    //992px
-    @media (min-width: 62em) {
+    @media (min-width: 992px) {
         height: 27%;
         margin: 0;
     }
@@ -18,8 +17,7 @@ export const Sticky = styled(motion.div)`
         font-size: ${({ theme: { fontSize } }) => fontSize.lg};
     }
 
-    // 768px
-    @media (min-width: 48em) {
+    @media (min-width: 768px) {
         display: grid;
         margin-top: 6rem;
         grid-template-columns: repeat(2, 1fr);
@@ -27,8 +25,7 @@ export const Sticky = styled(motion.div)`
         grid-template-areas: 'title images' 'explore images';
     }
 
-    // 530px and 760px
-    @media (min-width: 33.125em) and (max-width: 47.5em) {
+    @media (min-width: 530px) and (max-width: 760px) {
         p {
             font-size: calc(
                 ${({ theme: { fontSize } }) => fontSize.lg} + 0.5rem
@@ -36,8 +33,7 @@ export const Sticky = styled(motion.div)`
         }
     }
 
-    // 992px
-    @media (min-width: 62em) {
+    @media (min-width: 992px) {
         position: sticky;
         height: 100vh;
         top: 0;
@@ -53,8 +49,7 @@ export const Sticky = styled(motion.div)`
             '. .';
     }
 
-    // 1280px
-    @media (min-width: 80em) {
+    @media (min-width: 1280px) {
         max-width: 1024px;
         margin: 0 auto;
         p {
@@ -88,8 +83,7 @@ export const Explore = styled(motion.div)`
             background-color: ${({ theme: { color } }) => color.yellow[800]};
         }
     }
-    // 480px
-    @media (min-width: 30em) {
+    @media (min-width: 480px) {
         strong {
             font-size: ${({ theme: { fontSize } }) => fontSize['3xl']};
         }
@@ -98,23 +92,35 @@ export const Explore = styled(motion.div)`
         }
     }
 
-    // 768px
-    @media (min-width: 48em) {
+    @media (min-width: 768px) {
         margin-top: 1rem;
     }
 
-    // 530px and 760px
-    @media (min-width: 33.125em) and (max-width: 47.5em) {
+    @media (min-width: 530px) and (max-width: 760px) {
         justify-content: space-evenly;
         align-items: flex-end;
         flex-direction: row;
     }
 
-    // 992px
-    @media (min-width: 62em) {
+    @media (min-width: 992px) {
+        margin-bottom: auto;
+        margin-top: 2rem;
+        strong {
+            font-size: calc(
+                ${({ theme: { fontSize } }) => fontSize['5xl']} - 1rem
+            );
+            line-height: 4.25rem;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        margin-top: 3rem;
         strong {
             font-size: ${({ theme: { fontSize } }) => fontSize['5xl']};
-            margin-top: 2rem;
+            line-height: 4.8rem;
+        }
+        button {
+            margin-top: 1.5rem;
         }
     }
 `
