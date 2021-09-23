@@ -181,7 +181,7 @@ const AboutUs: React.FC = () => {
                         },
                         hidden: {
                             opacity: [1, 0],
-                            y: [null, -50, 0]
+                            y: [null, -50, 100]
                         }
                     }}
                 >

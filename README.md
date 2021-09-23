@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/github/stars/LuizPedroSousa/Woodies?color=F7DEA6&style=for-the-badge" alt="GitHub Stars"/>
   </a>
   <a href="https://github.com/LuizPedroSousa/Woodies/network">
-    <img src="https://img.shields.io/github/forks/LuizPedroSousa/Woodies?color=F7DEA6style=for-the-badge" alt="GitHub Forks"/>
+    <img src="https://img.shields.io/github/forks/LuizPedroSousa/Woodies?color=F7DEA6&style=for-the-badge" alt="GitHub Forks"/>
   </a>
 </h1>
 
@@ -17,15 +17,13 @@
 </p>
 
 <p align="center">
-  <img src=".github/Gifs/desktop.gif" width="400" alt="desktop"/>
-  &nbsp;
-  <img src=".github/Gifs/mobile.gif" width="400"alt="mobile"/>
+  <img src=".github/gifs/desktop.gif" width="600px" alt="desktop"/>
 </p>
 <br/>
 
 ## :page_facing_up: Sobre
 
-Woodies é uma simples landing page com scroll animado!
+Woodies é uma simples landing page com scroll animado e feito com muito carinho!
 
 <br/>
 
@@ -35,16 +33,16 @@ Woodies é uma simples landing page com scroll animado!
 
 #### Para rodar este projeto você vai precisar das seguintes ferramentas:
 
--   <a href="https://git-scm.com/downloads">
+-   <a target="_blank" href="https://git-scm.com/downloads">
       Git <img src=".github/images/git.svg" width="10"  alt="Git"/>
     </a>
--   <a href="https://nodejs.org/pt-br/">
+-   <a target="_blank" href="https://nodejs.org/pt-br/">
       Node <img src=".github/images/node-js.svg" width="10" alt="Git"/>
     </a>
--   <a href="https://www.npmjs.com/">Npm <img src=".github/images/npm.svg" width="10" alt="Npm"/></a>
--   ou <a href="https://yarnpkg.com/getting-started/install">Yarn <img src=".github/images/yarn.svg" width="10" alt="Yarn"/></a>
+-   <a target="_blank" href="https://www.npmjs.com/">Npm <img src=".github/images/npm.svg" width="10" alt="Npm"/></a>
+-   ou <a target="_blank" href="https://yarnpkg.com/getting-started/install">Yarn <img src=".github/images/yarn.svg" width="10" alt="Yarn"/></a>
 -   E um bom editor de código como o
-    <a href="https://code.visualstudio.com/">
+    <a target="_blank" href="https://code.visualstudio.com/">
     VsCode <img src=".github/images/visualstudiocode.svg" alt="vscode" width="10"/>
     </a>
 
@@ -61,8 +59,12 @@ $ cd ./Woodies
 # Instale as dependências
 $ npm install
 
-# E inicie o projeto!
+# Abra outro terminal na pasta do woodies e rode a fake api
+$ npm run json-server
+
+# Volte para o primeiro terminal e inicie o projeto!
 $ npm run dev
+
 
 ```
 
@@ -70,27 +72,27 @@ $ npm run dev
 
 ## 🛠 Tecnologias
 
--   <a href="https://www.gatsbyjs.com/">
+-   <a target="_blank" href="https://www.gatsbyjs.com/">
     GatsbyJS <img width="10" src=".github/images/gatsby.svg"/>
     </a>
 
--   <a href="https://reactjs.org/">
+-   <a target="_blank" href="https://reactjs.org/">
     React-Js <img width="10" src=".github/images/react.svg"/>
     </a>
 
--   <a href="https://styled-components.com/">
+-   <a target="_blank" href="https://styled-components.com/">
     Styled-Components <img width="10" src=".github/images/styled-components.svg"/>
     </a>
 
--   <a href="https://swr.vercel.app/">
+-   <a target="_blank" href="https://swr.vercel.app/">
     SWR <img width="10" src=".github/images/swr.svg"/>
     </a>
 
--   <a href="https://www.framer.com/motion/">
+-   <a target="_blank" href="https://www.framer.com/motion/">
     Framer-Motion <img width="10" src=".github/images/framer-motion.svg"/>
     </a>
 
--   <a href="https://www.typescriptlang.org/">
+-   <a target="_blank" href="https://www.typescriptlang.org/">
     Typescript <img width="10" src=".github/images/typescript.svg"/>
     </a>
 
@@ -98,11 +100,19 @@ $ npm run dev
 
 ## :clipboard: Road map
 
+-   [x] Aplicar mobile first
+-   [x] Deixar scroll animado apenas no desktop devido a performance e viewport
+-   [ ] Integrar com api [própria](https://github.com/LuizPedroSousa/Woodies-Api)
+-   [ ] Testes
+    -   [ ] Unitários
+    -   [ ] Integração
+    -   [ ] Endpoint
+
 <br/>
 
 ## :man: Author
 
-<a href="https://github.com/LuizPedroSousa">
+<a target="_blank" href="https://github.com/LuizPedroSousa">
   <img src="https://avatars.githubusercontent.com/u/62396753?s=460&u=2b00598abce2cd6c536d26c2ee8f45b6de332527&v=4" alt ="avatar" style="border-radius: 50%;" width="100px">
   <br/>
 </a>

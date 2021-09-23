@@ -1,9 +1,9 @@
 const customQueries = {
-    xs: '(min-width: 30em)', // 480px
-    sm: '(min-width: 48em)', // 768px
-    md: '(min-width: 62em)', // 992px
-    l: '(min-width: 80em)', // 1280px
-    xl: '(min-width: 96em)', // 1536px
+    xs: '(min-width: 480px)',
+    sm: '(min-width: 768px)',
+    md: '(min-width: 992px)',
+    l: '(min-width: 1280px)',
+    xl: '(min-width: 1536px)',
     portrait: '(orientation: portrait)'
 }
 
